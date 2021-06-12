@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     //Player Movement Variables
-    public float baseSpeed = 2f;
-    public float sprintSpeed = 5f;
+    public float baseSpeed = 5f;
+    public float sprintSpeed = 10f;
     public float jumpHeight = 1f;
     public float gravityValue = -9.81f;
 
