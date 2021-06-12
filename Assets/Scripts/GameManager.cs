@@ -19,6 +19,23 @@ public class GameManager : MonoBehaviour
     }
 
     void Update(){
-
+        switch(currentGameState){
+            case GameState.playing:
+                //Resume game and hide the pause screen
+                Time.timeScale = 1f;
+                break;
+            case GameState.paused:
+                //Stop the game and overlay a pause screen. Include a button to resume game or go to main-menu.
+                Time.timeScale = 0f;
+                break;
+            case GameState.wonGame:
+                //Stop the game and overlay a gameover screen. Include a button to restart game or go to main-menu.
+                Time.timeScale = 0f;
+                break;
+            case GameState.gameOver:
+                //Stop the game and overlay a gameover screen. Include a button to restart game or go to main-menu.
+                Time.timeScale = 0f;
+                break;
+        }
     }
 }
