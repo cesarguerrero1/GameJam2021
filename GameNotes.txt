@@ -4,7 +4,7 @@ Overall Gameplan:
 2. Develop the movement system (Walking, Sprinting, Jumping). - DONE
 3. Incorporate the enemy. - DONE
 4. Make the enemy slowly lurch toward you and increase with speed over time. - DONE
-5. Make the various gamestates.
+5. Make the various gamestates. - DONE
 6. Start Menu.
 7. Loading Screen.
 8. Pause Screen (All time should stop).
