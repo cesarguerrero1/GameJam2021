@@ -17,7 +17,9 @@ public class UIManager : MonoBehaviour
     private Slider batteryLifeSlider;
 
     public float batteryDrainRate = .1f;
-
+    public float batteryValue;
+    private float batteryDrainTimer = 0f;
+    private float lastTimer;
     void Start(){
         //Grab the Text Elements from the UI Elements
         gameTimeText = gameTimeUI.GetComponent<TextMeshProUGUI>();
@@ -28,13 +30,21 @@ public class UIManager : MonoBehaviour
         gameTimeText.text = $"Time: {Mathf.Round(Time.time)}";
         percentCompleteText.text = "0%";
         batteryLifeSlider.value = 1;
+        batteryValue = batteryLifeSlider.value;
+        batteryDrainTimer = Time.time;
+    }
+
+    private void ReduceBatteryLife(){
+        batteryLifeSlider.value -= batteryDrainRate;
+        batteryValue = batteryLifeSlider.value;
+        batteryDrainTimer = Time.time;
     }
 
     void Update(){
 
         gameTimeText.text = $"Time: {Mathf.Round(Time.time)}";
-        if(Time.time % 5f == 0){
-            batteryLifeSlider.value -= batteryDrainRate;
+        if(Time.time - batteryDrainTimer > 5){
+            ReduceBatteryLife();
         }
     }
 }

@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float baseSpeed = 5f;
     public float sprintSpeed = 10f;
     public float jumpHeight = 1f;
-    public float gravityValue = -9.81f;
+    private float gravityValue = -9.81f;
 
     //Grabbing GameObjects and transforms;
     private Transform player;
@@ -16,11 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     //Private Variables
     private Vector2 chosenDirection = new Vector2(0, 0);
-    public Vector3 verticalVelocity = new Vector3(0, 0, 0);
+    private Vector3 verticalVelocity = new Vector3(0, 0, 0);
     private Vector3 currentLandVelocity = new Vector3(0, 0, 0);
 
     //Booleans
-    public bool isGrounded = false;
+    private bool isGrounded = false;
     private bool isSprinting = false;
 
 

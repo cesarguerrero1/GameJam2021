@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameStateManager : MonoBehaviour
 {
 
     public enum GameState{
@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     }
 
     public GameState currentGameState;
-
+    
     void Start(){
         currentGameState = GameState.playing;
     }
