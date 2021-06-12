@@ -6,8 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     //Player Movement Variables
     public float baseSpeed = 2f;
-    public float sprintSpeed = 3.5f;
-    public float jumpHeight = .5f;
+    public float sprintSpeed = 5f;
+    public float jumpHeight = 1f;
+    public float gravityValue = -9.81f;
 
     //Grabbing GameObjects and transforms;
     private Transform player;
@@ -15,12 +16,13 @@ public class PlayerMovement : MonoBehaviour
 
     //Private Variables
     private Vector2 chosenDirection = new Vector2(0, 0);
-    private Vector3 verticalVelocity = new Vector3(0, 0, 0);
+    public Vector3 verticalVelocity = new Vector3(0, 0, 0);
     private Vector3 currentLandVelocity = new Vector3(0, 0, 0);
 
     //Booleans
-
+    public bool isGrounded = false;
     private bool isSprinting = false;
+
 
     void Start(){
         player = this.transform;
@@ -32,7 +34,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void OnJump(InputAction.CallbackContext callback){
-
+        //When you jump you gain an initial velocity which is v = sqrt(-2 * g * jumpDistance); g is assumed to be negative in this case
+        if(isGrounded){
+            verticalVelocity.y = Mathf.Sqrt(-2f * gravityValue * jumpHeight);
+        }
     }
 
     public void onSprint(InputAction.CallbackContext callback){
@@ -55,8 +60,19 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update(){
+        //Handle gravity!
+        isGrounded = playerController.isGrounded;
+        if(isGrounded && verticalVelocity.y < 0){
+            //Needs to be sufficiently big enough otherwise CharacterController panics
+            verticalVelocity.y = -1f;
+        }
+
         currentLandVelocity = CalculateLandVelocity(); 
-        playerController.Move(currentLandVelocity *Time.deltaTime);
+        playerController.Move(currentLandVelocity * Time.deltaTime);
+    
+        //You are always being crushed by gravity. If you don't multiply by Time.deltaTime here you are literally crushed. lol
+        verticalVelocity.y += gravityValue * Time.deltaTime;
+        playerController.Move(verticalVelocity * Time.deltaTime);   
     }
 
 }
