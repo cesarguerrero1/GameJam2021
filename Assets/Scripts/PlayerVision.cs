@@ -25,7 +25,6 @@ public class PlayerVision : MonoBehaviour
 
     public void OnCameraMove(InputAction.CallbackContext callback){
         cameraMovement = callback.ReadValue<Vector2>();
-        
     }
 
     void Update()

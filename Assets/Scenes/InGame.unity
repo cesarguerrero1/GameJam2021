@@ -374,7 +374,18 @@ MonoBehaviour:
     m_ActionId: 21499bbe-6481-453c-b6c6-e1015419bdce
     m_ActionName: Player Controls/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 863641477}
+        m_MethodName: onSprint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_ActionId: 6cbd7e9e-3b21-43f6-a772-0a4a39f28851
     m_ActionName: Player Controls/Sprint[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
@@ -427,8 +438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da3cb6f21ae18147849fe5a81c58339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 1
-  sprintSpeed: 1.25
+  baseSpeed: 2
+  sprintSpeed: 3.5
   jumpHeight: 0.5
 --- !u!1 &963194225
 GameObject:
