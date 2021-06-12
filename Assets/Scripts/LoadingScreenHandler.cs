@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreenHandler : MonoBehaviour
 {
+    
     IEnumerator AsyncLoadScene()
     {
         // The Application loads the Scene in the background as the current Scene runs.
@@ -24,8 +25,11 @@ public class LoadingScreenHandler : MonoBehaviour
     private void StartLoad(){
         StartCoroutine(AsyncLoadScene());
     }
-
     void Start(){
-        Invoke("StartLoad", 5f);
+        //Different parts of the game pause time so to be safe we are forcing it correctly here.
+        Time.timeScale = 1f;
+        Invoke("StartLoad", 2.5f);
     }
+
+
 }
