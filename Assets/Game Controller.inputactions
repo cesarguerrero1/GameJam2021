@@ -1,0 +1,33 @@
+{
+    "name": "Game Controller",
+    "maps": [
+        {
+            "name": "Player Controls",
+            "id": "b0b098d6-4034-4aea-b07f-4e2b53489c1c",
+            "actions": [
+                {
+                    "name": "CameraMove",
+                    "type": "PassThrough",
+                    "id": "86a35b3e-a992-41c0-8694-152e8006ce69",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "def9df71-1496-4f63-81ef-d3c2ad4df596",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
