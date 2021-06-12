@@ -12,6 +12,30 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "PlayerMove",
+                    "type": "Button",
+                    "id": "d46cd481-e844-492a-9f68-e0b0efcf6dac",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "21499bbe-6481-453c-b6c6-e1015419bdce",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Sprint",
+                    "type": "Button",
+                    "id": "6cbd7e9e-3b21-43f6-a772-0a4a39f28851",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -23,6 +47,83 @@
                     "processors": "",
                     "groups": "",
                     "action": "CameraMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "WASD",
+                    "id": "0709b8ff-2934-4d6d-89a8-6fd9d5749c71",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "a90dc885-e317-4e2c-95e6-6f2f714eec42",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "3a18437d-e179-46bc-8ca3-edef084bdee7",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "ead48271-251e-468a-942d-43362109a1d8",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "755c679a-a7c6-4e08-b3d3-19699d492e2c",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlayerMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "e8608d81-c9d0-4d46-b530-9466a7df5bb2",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d0e92546-154e-4614-bcaf-786a762af689",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "Hold(duration=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

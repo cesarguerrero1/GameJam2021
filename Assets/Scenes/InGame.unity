@@ -228,6 +228,8 @@ GameObject:
   - component: {fileID: 863641470}
   - component: {fileID: 863641475}
   - component: {fileID: 863641474}
+  - component: {fileID: 863641477}
+  - component: {fileID: 863641476}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -352,6 +354,29 @@ MonoBehaviour:
         m_CallState: 1
     m_ActionId: 86a35b3e-a992-41c0-8694-152e8006ce69
     m_ActionName: Player Controls/CameraMove[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 863641477}
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+    m_ActionId: d46cd481-e844-492a-9f68-e0b0efcf6dac
+    m_ActionName: Player Controls/PlayerMove[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 21499bbe-6481-453c-b6c6-e1015419bdce
+    m_ActionName: Player Controls/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6cbd7e9e-3b21-43f6-a772-0a4a39f28851
+    m_ActionName: Player Controls/Sprint[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player Controls
@@ -370,6 +395,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 10
+  upperLookLimit: 10
+  lowerLookLimit: -10
+--- !u!143 &863641476
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863641469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5000001
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &863641477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863641469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da3cb6f21ae18147849fe5a81c58339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseSpeed: 1
+  sprintSpeed: 1.25
+  jumpHeight: 0.5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

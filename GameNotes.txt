@@ -20,3 +20,4 @@ Nice-To-Have:
 2. Obstacles on the floor or in front of you. 
 3. If you bump into obstacles your top half falls off
 4. Holes in the ground wherein if you fall in, game over. 
+5. If the vision player is looking 60 degrees away from the movement players vision (its stagnant) and the player SPRINTS then the top player falls off. 

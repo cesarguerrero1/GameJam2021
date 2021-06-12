@@ -4,12 +4,20 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerVision : MonoBehaviour
 {
+    //Vision Movement Variables
     public float mouseSensitivity = 10f;
+    public float upperLookLimit = 10f;
+    public float lowerLookLimit = -10f;
+    
+
+    //Grabbing Players Vision Camera
     private Transform playerCamera;
+
+  
+    //Private Variables
+    private Vector2 cameraMovement;
     private float horizontalAxisRotation = 0f;
     private float verticalAxisRotation = 0f;
-
-   private Vector2 cameraMovement;
     void Start()
     {
         playerCamera = this.transform.GetChild(0);
@@ -29,7 +37,7 @@ public class PlayerVision : MonoBehaviour
         //When the player moves up and down we don't want them to be able to point all teh way
         verticalAxisRotation += xMovement;
         horizontalAxisRotation -= yMovement;
-        horizontalAxisRotation = Mathf.Clamp(horizontalAxisRotation, -10f, 10f);
+        horizontalAxisRotation = Mathf.Clamp(horizontalAxisRotation, lowerLookLimit, upperLookLimit);
         playerCamera.localRotation = Quaternion.Euler(horizontalAxisRotation, verticalAxisRotation, 0f);
     }
 }
