@@ -1,1 +1,22 @@
+Overall Gameplan:
 
+1. Develop the "vision" system (pointing the beam of light with mouse move.)
+2. Develop the movement system (Walking, Sprinting, Jumping).
+3. Incorporate the enemy.
+4. Make the enemy slowly lurch toward you and increase with speed over time.
+5. Make the various gamestates.
+6. Start Menu.
+7. Loading Screen.
+8. Pause Screen (All time should stop).
+9. Game Over Screen
+11. Winning Screen. 
+12. Audio
+13. Split Camera. Bottom Half sees their half and Top Half sees their half
+14. Randomly, your top half should fall off.
+15. Pickup your top half. 
+
+Nice-To-Have:
+1. Flashlight will run out of battery if you don't find batteries on the ground. 
+2. Obstacles on the floor or in front of you. 
+3. If you bump into obstacles your top half falls off
+4. Holes in the ground wherein if you fall in, game over. 
