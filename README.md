@@ -14,4 +14,6 @@ things while simultaneously illuminating the path for their partner. The monster
 Additionally, there are chances where the upper half of the partner may become disjoined from their bottom half which will 
 neccessitate the other half running back to pickup their partner.
 
+UPDATE - 9 minutes before game is due
 
+I ran out of time! Core gameplay is there but missed all of the cool details. Next time!

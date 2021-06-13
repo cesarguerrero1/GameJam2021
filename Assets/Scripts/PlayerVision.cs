@@ -11,8 +11,8 @@ public class PlayerVision : MonoBehaviour
     
 
     //Grabbing Players Vision Camera
+    private GameObject playerCameraObject;
     private Transform playerCamera;
-
   
     //Private Variables
     private Vector2 cameraMovement;
@@ -20,7 +20,10 @@ public class PlayerVision : MonoBehaviour
     private float verticalAxisRotation = 0f;
     void Start()
     {
-        playerCamera = this.transform.GetChild(0);
+        playerCameraObject = GameObject.Find("Vision Camera");
+        playerCamera = playerCameraObject.transform;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void OnCameraMove(InputAction.CallbackContext callback){

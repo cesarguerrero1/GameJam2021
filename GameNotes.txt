@@ -12,8 +12,9 @@ Overall Gameplan:
 11. Winning Screen. - DONE
 12. Audio  - DONE
 13. Split Camera. Bottom Half sees their half and Top Half sees their half - DONE
-14. Randomly, your top half should fall off.
-15. Pickup your top half. 
+14. Basic Animation - DONE
+15. Randomly, your top half should fall off. - DONE
+16. Pickup your top half. - DONE
 
 Nice-To-Have:
 1. Flashlight will run out of battery if you don't find batteries on the ground. 

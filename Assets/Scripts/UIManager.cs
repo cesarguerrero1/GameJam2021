@@ -6,6 +6,13 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    //Need access to the distance Traveled;
+    public GameObject player;
+    public GameObject finishLine;
+
+    private float totalGameDistance;
+    private float currentGameDistance;
+
     //UI Element GameObjects
     public GameObject gameTimeUI;
     public GameObject percentCompleteUI;
@@ -32,6 +39,9 @@ public class UIManager : MonoBehaviour
         batteryLifeSlider.value = 1;
         batteryValue = batteryLifeSlider.value;
         batteryDrainTimer = Time.time;
+
+        totalGameDistance = Vector3.Distance(player.transform.position, finishLine.transform.position);
+        currentGameDistance = 0f;
     }
 
     private void ReduceBatteryLife(){
@@ -46,5 +56,9 @@ public class UIManager : MonoBehaviour
         if(Time.time - batteryDrainTimer > 5){
             ReduceBatteryLife();
         }
+
+        currentGameDistance = totalGameDistance - Vector3.Distance(player.transform.position, finishLine.transform.position); 
+        percentCompleteText.text = $"{currentGameDistance/totalGameDistance}%";
+
     }
 }

@@ -20,7 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 currentLandVelocity = new Vector3(0, 0, 0);
 
     //Booleans
-    private bool isGrounded = false;
+    public bool isGrounded = false;
+    public bool isMoving = false;
     private bool isSprinting = false;
 
 
@@ -30,7 +31,13 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void OnMove(InputAction.CallbackContext callback){
-        chosenDirection = callback.ReadValue<Vector2>();
+        if(callback.performed){
+            chosenDirection = callback.ReadValue<Vector2>();
+            isMoving = true;
+        }else{
+             chosenDirection = callback.ReadValue<Vector2>();
+             isMoving = false;
+        }
     }
 
     public void OnJump(InputAction.CallbackContext callback){
