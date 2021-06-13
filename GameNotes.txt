@@ -7,11 +7,11 @@ Overall Gameplan:
 5. Make the various gamestates. - DONE
 6. Start Menu.- DONE 
 7. Loading Screen. - DONE
-8. Pause Screen (All time should stop). 
-9. Game Over Screen
-11. Winning Screen. 
-12. Audio
-13. Split Camera. Bottom Half sees their half and Top Half sees their half
+8. Pause Screen (All time should stop). - DONE
+9. Game Over Screen - DONE
+11. Winning Screen. - DONE
+12. Audio  - DONE
+13. Split Camera. Bottom Half sees their half and Top Half sees their half - DONE
 14. Randomly, your top half should fall off.
 15. Pickup your top half. 
 
